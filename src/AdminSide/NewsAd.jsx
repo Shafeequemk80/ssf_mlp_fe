@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {submitnews} from '../api/apiCall.js'
+import toast, { Toaster } from 'react-hot-toast';
 const NewsAd = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [header, setHeader] = useState('');
@@ -18,6 +19,7 @@ const NewsAd = () => {
   };
 
   const handleSubmit = async (e) => {
+    toast.loading('loading added');
     e.preventDefault();
 
     const formData = new FormData();
@@ -30,8 +32,14 @@ const NewsAd = () => {
     try {
       const response = await submitnews(formData)
 
-      if (response.ok) {
+      if (response.message==true) {
+        toast.dismiss()
+        toast.success('success added');
         console.log('News uploaded successfully');
+        setImagePreview(null)
+        setHeader('')
+        setContent('')
+
       } else {
         console.error('Failed to upload news');
       }
@@ -95,6 +103,7 @@ const NewsAd = () => {
           </button>
         </div>
       </form>
+      <Toaster />
     </div>
   );
 };
