@@ -56,12 +56,12 @@ const Nav = ({onLive}) => {
             Home
           </li>
         </Link>
-        <Link to={'/sahieast/about'}>
+        <Link to={'/about'}>
           <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             About
           </li>
         </Link>
-        <Link to={'/sahieast/news'}>
+        <Link to={'/news'}>
           <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             News
 
@@ -70,7 +70,7 @@ const Nav = ({onLive}) => {
         {/* <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
           Gallery
         </li> */}
-        <Link to={'/sahieast/videos'}>
+        <Link to={'/videos'}>
           <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             Videos
             {onLive &&
@@ -82,12 +82,12 @@ const Nav = ({onLive}) => {
               </svg>}
           </li>
         </Link>
-        <Link to={'/sahieast/downloads'}>
+        <Link to={'/downloads'}>
           <li className=" hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             Downloads
           </li>
         </Link>
-        <Link to={'/sahieast/results'}>
+        <Link to={'/results'}>
           <li className="text-theme_gold hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_red">
             Results
           </li>
@@ -126,7 +126,7 @@ const Nav = ({onLive}) => {
             </MenuItem>
           
             <MenuItem>
-              <Link to={'/sahieast/about'}>
+              <Link to={'/about'}>
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
@@ -138,7 +138,7 @@ const Nav = ({onLive}) => {
             </MenuItem>
 
             <MenuItem>
-              <Link to={'/sahieast/news'}>
+              <Link to={'/news'}>
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
@@ -158,7 +158,7 @@ const Nav = ({onLive}) => {
             </MenuItem> */}
 
             <MenuItem>
-              <Link to={'/sahieast/videos'}>
+              <Link to={'/videos'}>
                 <a
                   href="#"
                   className="flex gap-1  px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
@@ -176,7 +176,7 @@ const Nav = ({onLive}) => {
             </MenuItem>
 
             <MenuItem>
-              <Link to={'/sahieast/downloads'}>
+              <Link to={'/downloads'}>
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
@@ -186,7 +186,7 @@ const Nav = ({onLive}) => {
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to={'/sahieast/results'}>
+              <Link to={'/results'}>
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm text-theme_gold data-[focus]:bg-gray-100 data-[focus]:text-gray-900"

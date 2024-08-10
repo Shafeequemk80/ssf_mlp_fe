@@ -77,7 +77,7 @@ const ResultAd = () => {
       </h1>
       <button
         onClick={() => {
-          navigate("/sahieast/admin/addimage");
+          navigate("/admin/addimage");
         }}
         className="border cursor-pointer border-theme_black w-full p-3 mb-4 text-center font-medium bg-theme_yellow"
       >

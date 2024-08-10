@@ -29,16 +29,16 @@ function App () {
       
       <Routes>
 
-        <Route path="*" element={<Navigate to="/sahieast" />} />
-        <Route path="/sahieast/" element={<Home />} />
-        <Route path="/sahieast/about" element={<About />} />
-        <Route path="/sahieast/news" element={<News />} />
-        <Route path="/sahieast/newscnt" element={<NewsCnt />} />
-        <Route path="/sahieast/downloads" element={<Downloads/>} />
-        <Route path="/sahieast/results" element={<Results />} />
-        <Route path="/sahieast/videos" element={<Videos />} />
-        <Route path="/sahieast/admin" element={<Admin/>} />
-        <Route path="/sahieast/admin/addimage" element={<ImageUpload/>} />
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/newscnt" element={<NewsCnt />} />
+        <Route path="/downloads" element={<Downloads/>} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/admin" element={<Admin/>} />
+        <Route path="/admin/addimage" element={<ImageUpload/>} />
 
       </Routes>
 

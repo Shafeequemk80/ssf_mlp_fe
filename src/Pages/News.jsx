@@ -29,7 +29,7 @@ const News = () => {
           <div
             key={news._id}
             onClick={() => {
-              navigate("/sahieast/newscnt", { state: { id: news._id } });
+              navigate("/newscnt", { state: { id: news._id } });
             }}
             className="w-full h-full overflow-hidden rounded-tr-3xl rounded-bl-3xl shadow-xl cursor-pointer"
           >
@@ -48,7 +48,7 @@ const News = () => {
             </div>
             <div
               onClick={() => {
-                navigate("/sahieast/newscnt", { state: { id: news._id } });
+                navigate("/newscnt", { state: { id: news._id } });
               }}
               className="p-5 inline-flex items-center text-sm font-medium text-theme_red cursor-pointer"
             >
