@@ -39,7 +39,8 @@ const ScoreAd = () => {
         {teamPoints.map((team) => (
           <React.Fragment key={team}>
             <label className="w-full cursor-pointer border p-3">
-              {team=='ManjeriEast'?"Manjeri East":team||team=='ManjeriWest'?"Manjeri West":team}
+            {team === 'ManjeriEast' ? "Manjeri East" : team === 'ManjeriWest' ? "Manjeri West" : team}
+
               <input
                 type="text"
                 className="w-full cursor-pointer border border-theme_black p-3 placeholder:text-black mt-2"

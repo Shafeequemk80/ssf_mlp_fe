@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseUrl = "http://localhost:3000";
-//const baseUrl = "https://sahityolsav-backred.onrender.com";
+//const baseUrl = "https://ssf-mlp-be.onrender.com";
 async function getDataServer(item, category) {
   const response = await axios.get(
     `${baseUrl}/?item=${item}&category=${category}`
@@ -93,6 +93,21 @@ return response.data
   }
  }
 
+ async function submitnews(formData) {
+  try {
+    console.log(formData);
+    const response = await axios.post(
+      `${baseUrl}/addnews`,
+      formData,
+      options
+    );
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export {
   postDataServer,
   getDataServer,
@@ -102,5 +117,6 @@ export {
   getNewsContent,
   scoreData,
   getScore,
+  submitnews,
   baseUrl,
 };

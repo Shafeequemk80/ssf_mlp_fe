@@ -1,19 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { GiTrophyCup } from 'react-icons/gi';
-import AnimatedCounter from './AnimatedCounter';
-import { getScore } from '../api/apiCall';
+import React, { useEffect, useRef, useState } from "react";
+import { GiTrophyCup } from "react-icons/gi";
+import AnimatedCounter from "./AnimatedCounter";
+import { getScore } from "../api/apiCall";
 
 const Score = ({ scoreOn, setScoreOn }) => {
   const scoreRef = useRef(null);
   const [winners, setWinners] = useState([]);
-
 
   const handleToggle = () => {
     setScoreOn(!scoreOn);
     console.log(scoreOn);
   };
 
-  const handleClickOutside = e => {
+  const handleClickOutside = (e) => {
     if (scoreRef.current && !scoreRef.current.contains(e.target)) {
       setScoreOn(false);
     }
@@ -23,10 +22,10 @@ const Score = ({ scoreOn, setScoreOn }) => {
     async function fetchData() {
       const response = await getScore();
       const data = response.data[0];
-      console.log('data', data);
-  
+      console.log("data", data);
+
       let winnerArr = [];
-  
+
       // Iterate over object keys
       for (let key in data) {
         if (data.hasOwnProperty(key)) {
@@ -37,19 +36,18 @@ const Score = ({ scoreOn, setScoreOn }) => {
         }
       }
       console.log(winnerArr);
-      
+
       setWinners(winnerArr);
-      console.log(winners, 'win');
+      console.log(winners, "win");
     }
-  
+
     fetchData();
   }, []);
-  
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -75,11 +73,13 @@ const Score = ({ scoreOn, setScoreOn }) => {
             <ul className="text-xl font-semibold">
               {winners.map((winner, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  {winner.team}. {/* Showing rank */}
-                  {' '}
+                  {winner.team}. {/* Showing rank */}{" "}
                   <span className="text-2xl">
                     {winner.point > 0 ? (
-                      <AnimatedCounter endValue={winner.point} duration={1000} />
+                      <AnimatedCounter
+                        endValue={winner.point}
+                        duration={1000}
+                      />
                     ) : (
                       0
                     )}
