@@ -17,7 +17,6 @@ const Score = ({ scoreOn, setScoreOn }) => {
       setScoreOn(false);
     }
   };
-
   useEffect(() => {
     async function fetchData() {
       const response = await getScore();
@@ -35,6 +34,10 @@ const Score = ({ scoreOn, setScoreOn }) => {
           winnerArr.push(res);
         }
       }
+
+      // Sort the winnerArr by point in descending order
+      winnerArr = winnerArr.sort((a, b) => b.point - a.point);
+
       console.log(winnerArr);
 
       setWinners(winnerArr);
@@ -73,17 +76,23 @@ const Score = ({ scoreOn, setScoreOn }) => {
             <ul className="text-xl font-semibold">
               {winners.map((winner, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  {winner.team}. {/* Showing rank */}{" "}
-                  <span className="text-2xl">
-                    {winner.point > 0 ? (
-                      <AnimatedCounter
-                        endValue={winner.point}
-                        duration={1000}
-                      />
-                    ) : (
-                      0
-                    )}
-                  </span>
+                  <div className="grid grid-cols-2 gap-36">
+                    <div>
+                      {winner.team}
+                    </div>
+                    <div>
+                      <span className="text-2xl">
+                        {winner.point > 50? (
+                          <AnimatedCounter
+                            endValue={winner.point}
+                            duration={200}
+                          />
+                        ) : (
+                          0
+                        )}
+                      </span>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
