@@ -111,14 +111,14 @@ const ResultAd = () => {
           </select>
         </div>
 
-        <div className="flex flex-col ">
-          <div>
+        <div className="mt-6 flex flex-col ">
+          <div className="mb-3">
             <label className=" " htmlFor="">
               First Price
             </label>
           </div>
-          <div className="grid grid-cols-2 gap-8 my-1">
-            <div>
+          <div className="flex max-md:flex-col gap-6 ">
+            <div className="w-full">
               <input
                 onChange={handleformData}
                 value={formData.firstPrice}
@@ -128,7 +128,7 @@ const ResultAd = () => {
                 placeholder="Enter Name"
               />
             </div>
-            <div>
+            <div className="w-full">
               <select
                 name=""
                 onChange={handleformData}
@@ -145,14 +145,14 @@ const ResultAd = () => {
           </div>
         </div>
 
-        <div className="flex flex-col ">
-          <div>
+        <div className="mt-6 flex flex-col ">
+          <div className="mb-3">
             <label className=" " htmlFor="">
               Sec Price
             </label>
           </div>
-          <div className="grid grid-cols-2 gap-8 my-1">
-            <div>
+          <div className="flex max-md:flex-col gap-6 my-1">
+            <div className="w-full">
               <input
                 value={formData.secPrice}
                 onChange={handleformData}
@@ -162,7 +162,7 @@ const ResultAd = () => {
                 placeholder="Enter Name"
               />
             </div>
-            <div>
+            <div className="w-full">
               <select
                 name="item"
                 onChange={handleformData}
@@ -179,14 +179,14 @@ const ResultAd = () => {
           </div>
         </div>
 
-        <div className="flex flex-col ">
-          <div>
+        <div className="my-6  flex flex-col ">
+          <div className="mb-3">
             <label className=" " htmlFor="">
               Third Price
             </label>
           </div>
-          <div className="grid grid-cols-2 gap-8 my-1">
-            <div>
+          <div className="flex max-md:flex-col gap-6 my-1">
+            <div className="w-full">
               <input
                 value={formData.thirdPrice}
                 onChange={handleformData}
@@ -196,7 +196,7 @@ const ResultAd = () => {
                 id="thirdPrice"
               />
             </div>
-            <div>
+            <div className="w-full">
               <select
                 name="item"
                 value={formData.thirdUnit}
