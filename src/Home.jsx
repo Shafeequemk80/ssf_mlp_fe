@@ -10,6 +10,7 @@ import Sample from './Sections/Sample';
 import Gallery from './Sections/Gallery';
 import Live from './components/Live';
 import MapFdbk from './Sections/MapFdbk';
+import LiveLinks from './Sections/LiveLinks';
 
 
 const Home = () => {
@@ -23,8 +24,7 @@ const Home = () => {
       <Ribbon />
       <Message />
       <Counts/>
-      {/* <WhatSahi /> */}
-      <MapFdbk/>  
+      <LiveLinks/>
 {/* <Sample/> */}
     </div>
   );
