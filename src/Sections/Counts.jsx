@@ -6,9 +6,9 @@ const Counts = () => {
   const countsElements = [
     {cnt: 3, elem: 'Days'},
     {cnt: 12, elem: 'Stages'},
-    {cnt: 11, elem: 'Teams'},
-    {cnt: 168, elem: 'Events'},
+    {cnt: 170, elem: 'Events'},
     {cnt: 3000, elem: 'Participants'},
+    {cnt: 25000, elem: 'Audience'},
     
   ];
 
