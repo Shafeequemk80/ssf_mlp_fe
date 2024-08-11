@@ -172,7 +172,7 @@ const Results = () => {
             </>
           )}
              {results == false && (
-          <div className="bg-yellow-100 border-l-4 mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
+          <div className="bg-yellow-100 border-l-4 lg:mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
             <h2 className="font-bold text-lg">Notice:</h2>
             <p className="mt-2">
               The results for the {category} {selectedItem} Competition have not
