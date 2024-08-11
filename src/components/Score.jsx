@@ -55,7 +55,7 @@ const Score = ({ scoreOn, setScoreOn }) => {
   }, []);
 
   return (
-    <section className="mt-72 z-150 fixed flex gap-1">
+    <section className="mt-40 z-150 fixed flex gap-1">
       <div
         onClick={handleToggle}
         className="h-16 w-10 hover:w-12 bg-theme_yellow rounded-r-full flex justify-center items-center cursor-pointer hover:bg-theme_gold transition-all duration-300 ease-in-out"
