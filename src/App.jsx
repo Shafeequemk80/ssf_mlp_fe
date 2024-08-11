@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {HashRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Home from './Home';
 import Nav from './Sections/Nav';
@@ -15,11 +15,10 @@ import Admin from './AdminSide/Admin';
 import About from './Pages/About';
 import ImageUpload from './Pages/ImageUpload';
 
-
-function App () {
-  const [count, setCount] = useState (0);
-  const [onLive, setOnlive] = useState (false);
-  const [scoreOn, setScoreOn] =useState(false)
+function App() {
+  const [count, setCount] = useState(0);
+  const [onLive, setOnlive] = useState(false);
+  const [scoreOn, setScoreOn] = useState(false);
 
   return (
     <Router>
@@ -28,7 +27,6 @@ function App () {
       <Score scoreOn={scoreOn} setScoreOn={setScoreOn} />
       
       <Routes>
-
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -39,11 +37,9 @@ function App () {
         <Route path="/videos" element={<Videos />} />
         <Route path="/admin" element={<Admin/>} />
         <Route path="/admin/addimage" element={<ImageUpload/>} />
-
       </Routes>
 
-      <Footer  />
-      
+      <Footer />
     </Router>
   );
 }

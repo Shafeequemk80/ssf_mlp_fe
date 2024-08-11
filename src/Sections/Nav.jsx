@@ -42,7 +42,7 @@ const Nav = ({onLive}) => {
       <Link to={'/'}>
         <div
           className="flex gap-3 cursor-pointer hover:scale-110 transform transition-transform duration-300"
-          href="/"
+          
         >
           <img src={Logo} className="h-10" alt="" />
           <img src={FestTitle} className="h-10" alt="" />
