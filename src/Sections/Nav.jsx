@@ -70,7 +70,7 @@ const Nav = ({onLive}) => {
         {/* <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
           Gallery
         </li> */}
-        {/* <Link to={'/videos'}>
+        <Link to={'/videos'}>
           <li className="hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             Videos
             {onLive &&
@@ -81,7 +81,7 @@ const Nav = ({onLive}) => {
                 />
               </svg>}
           </li>
-        </Link> */}
+        </Link>
         <Link to={'/downloads'}>
           <li className=" hover:scale-110 transform transition-transform duration-300 cursor-pointer hover:text-theme_gold">
             Downloads
@@ -157,7 +157,7 @@ const Nav = ({onLive}) => {
               </a>
             </MenuItem> */}
 
-            {/* <MenuItem>
+            <MenuItem>
               <Link to={'/videos'}>
                 <a
               
@@ -173,7 +173,7 @@ const Nav = ({onLive}) => {
                     </svg>}
                 </a>
               </Link>
-            </MenuItem> */}
+            </MenuItem>
 
             <MenuItem>
               <Link to={'/downloads'}>
