@@ -38,7 +38,7 @@ const Score = ({ scoreOn, setScoreOn }) => {
       // Sort the winnerArr by point in descending order
       winnerArr = winnerArr.sort((a, b) => b.point - a.point);
 
-      console.log(winnerArr);
+      console.log("winnerArr", winnerArr);
 
       setWinners(winnerArr);
       console.log(winners, "win");
@@ -78,11 +78,18 @@ const Score = ({ scoreOn, setScoreOn }) => {
                 <li key={index} className="flex items-center gap-3">
                   <div className="grid grid-cols-2 gap-36">
                     <div>
-                   <h1 className="w-52"> {winner.team === 'ManjeriEast' ? "Manjeri East" : winner.team === 'ManjeriWest' ? "Manjeri West" : winner.team}</h1>
+                      <h1 className="w-52">
+                        {" "}
+                        {winner.team === "ManjeriEast"
+                          ? "Manjeri East"
+                          : winner.team === "ManjeriWest"
+                          ? "Manjeri West"
+                          : winner.team}
+                      </h1>
                     </div>
                     <div>
                       <span className="text-2xl">
-                        {winner.point > 50? (
+                        {winner.point > 50 ? (
                           <AnimatedCounter
                             endValue={winner.point}
                             duration={200}

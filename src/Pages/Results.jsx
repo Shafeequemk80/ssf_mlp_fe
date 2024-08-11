@@ -72,7 +72,6 @@ const Results = () => {
       if (response.data) {
         toast.success(`Yes, ${category} ${selectedItem} result published`);
       } else {
-
         toast(`NO, ${category} ${selectedItem} result published Yet`);
       }
     } catch (error) {
@@ -126,60 +125,78 @@ const Results = () => {
             </p>
           </div>
           <div className="winners w-full h-auto font-poppins bg-light_gray text-theme_black flex flex-col  border border-theme_black p-5">
-          {results&&(
-            <>
-            
-            <div className="text-center">
-          
-              <h1 className="text-2xl font-light">{category}</h1>
-              <h1 className="text-3xl font-bold">{selectedItem}</h1>
-            </div>
-            <div className="flex items-start gap-2 mt-6">
-              <PiMedalFill size={30} color={"gold"} className="first_place" />
-              <div>
-                <h1 className="font-semibold text-xl">
-                  {results.result[0].firstPrice}
-                </h1>
-                <h1 className="font-light">{results.result[0].firstUnit}</h1>
+            {results && (
+              <>
+                <div className="text-center">
+                  <h1 className="text-2xl font-light">{category}</h1>
+                  <h1 className="text-3xl font-bold">{selectedItem}</h1>
+                </div>
+                <div className="flex items-start gap-2 mt-6">
+                  <PiMedalFill
+                    size={30}
+                    color={"gold"}
+                    className="first_place"
+                  />
+                  <div>
+                    <h1 className="font-semibold text-xl">
+                      {results.result[0].firstPrice
+                        ? results.result[0].firstPrice
+                            .toLowerCase()
+                            .replace(/^\w/, (c) => c.toUpperCase())
+                        : ""}
+                    </h1>
+                    <h1 className="font-light">
+                      {results.result[0].firstUnit}
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 mt-6">
+                  <PiMedalBold
+                    size={30}
+                    color={"silver"}
+                    className="second_place"
+                  />
+                  <div>
+                    <h1 className="font-semibold text-xl">
+                      {results.result[1].secPrice
+                        ? results.result[1].secPrice
+                            .toLowerCase()
+                            .replace(/^\w/, (c) => c.toUpperCase())
+                        : ""}
+                    </h1>
+                    <h1 className="font-light">{results.result[1].secUnit}</h1>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 mt-6">
+                  <PiMedalLight
+                    size={30}
+                    color={"bronze"}
+                    className="third_place"
+                  />
+                  <div>
+                    <h1 className="font-semibold text-xl">
+                      {results.result[2].thirdPrice
+                        ? results.result[2].thirdPrice
+                            .toLowerCase()
+                            .replace(/^\w/, (c) => c.toUpperCase())
+                        : ""}{" "}
+                    </h1>
+                    <h1 className="font-light">
+                      {results.result[2].thirdUnit}
+                    </h1>
+                  </div>
+                </div>
+              </>
+            )}
+            {results == false && (
+              <div className="bg-yellow-100 border-l-4 lg:mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
+                <h2 className="font-bold text-lg">Notice:</h2>
+                <p className="mt-2">
+                  The results for the {category} {selectedItem} Competition have
+                  not yet been published. Please check back later for updates.
+                </p>
               </div>
-            </div>
-            <div className="flex items-start gap-2 mt-6">
-              <PiMedalBold
-                size={30}
-                color={"silver"}
-                className="second_place"
-              />
-              <div>
-                <h1 className="font-semibold text-xl">
-                  {results.result[1].secPrice}
-                </h1>
-                <h1 className="font-light">{results.result[1].secUnit}</h1>
-              </div>
-            </div>
-            <div className="flex items-start gap-2 mt-6">
-              <PiMedalLight
-                size={30}
-                color={"bronze"}
-                className="third_place"
-              />
-              <div>
-                <h1 className="font-semibold text-xl">
-                  {results.result[2].thirdPrice}{" "}
-                </h1>
-                <h1 className="font-light">{results.result[2].thirdUnit}</h1>
-              </div>
-            </div>
-            </>
-          )}
-             {results == false && (
-          <div className="bg-yellow-100 border-l-4 lg:mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
-            <h2 className="font-bold text-lg">Notice:</h2>
-            <p className="mt-2">
-              The results for the {category} {selectedItem} Competition have not
-              yet been published. Please check back later for updates.
-            </p>
-          </div>
-        )}
+            )}
           </div>
         </div>
       </div>

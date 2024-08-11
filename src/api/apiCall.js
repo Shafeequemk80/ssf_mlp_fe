@@ -86,7 +86,7 @@ async function scoreData(formData) {
   try {
     const response = await axios.get(`${baseUrl}/getscore`);
 return response.data
-    return response.data;
+
   } catch (error) {
     console.error('Error fetching news content:', error);
     throw error;

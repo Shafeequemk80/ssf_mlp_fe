@@ -67,8 +67,17 @@ function ImageDownload({ results, color, category, selectedItem, image }) {
                 {results.result.map((result, index) => (
                   <div key={index}>
                     <div className={`text-sm/[10px] poppins-semibold ${color}`}>
-                      {result.firstPrice || result.secPrice || result.thirdPrice}
+                      {result.firstPrice || result.secPrice || result.thirdPrice
+                        ? (
+                            result.firstPrice ||
+                            result.secPrice ||
+                            result.thirdPrice
+                          )
+                            .toLowerCase()
+                            .replace(/^\w/, (c) => c.toUpperCase())
+                        : ""}
                     </div>
+
                     <div className={`text-[10px] mb-2 poppins-light ${color}`}>
                       {result.firstUnit || result.secUnit || result.thirdUnit}
                     </div>
