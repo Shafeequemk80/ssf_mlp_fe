@@ -72,6 +72,7 @@ const Results = () => {
       if (response.data) {
         toast.success(`Yes, ${category} ${selectedItem} result published`);
       } else {
+
         toast(`NO, ${category} ${selectedItem} result published Yet`);
       }
     } catch (error) {
@@ -125,7 +126,7 @@ const Results = () => {
             </p>
           </div>
           <div className="winners w-full h-auto font-poppins bg-light_gray text-theme_black flex flex-col  border border-theme_black p-5">
-          {results?(
+          {results&&(
             <>
             
             <div className="text-center">
@@ -169,13 +170,16 @@ const Results = () => {
               </div>
             </div>
             </>
-          ):(
-            <div className="text-center">
-                 <h1 className="text-3xl font-medium animate-pulse text-red-600">
-            Results not yet published!
-          </h1>
-            </div>
           )}
+             {results == false && (
+          <div className="bg-yellow-100 border-l-4 mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
+            <h2 className="font-bold text-lg">Notice:</h2>
+            <p className="mt-2">
+              The results for the {category} {selectedItem} Competition have not
+              yet been published. Please check back later for updates.
+            </p>
+          </div>
+        )}
           </div>
         </div>
       </div>
