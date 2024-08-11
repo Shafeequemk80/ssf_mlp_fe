@@ -27,6 +27,7 @@ const teams = [
   "Kolathur",
   "Manjeri East",
   "Manjeri West",
+  "Edavannappara",
   "Perinthalmanna",
   "Malappuram",
   "Wandoor",

@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const ScoreAd = () => {
   const teamPoints = [
     'Kondotty', 'Areekode', 'Pulikkal', 'Edakkara', 'Nilambur',
-    'Kolathur', 'ManjeriEast', 'ManjeriWest', 'Perinthalmanna',
+    'Kolathur', 'ManjeriEast', 'ManjeriWest','Edavannappara', 'Perinthalmanna',
     'Malappuram', 'Wandoor'
   ];
 
