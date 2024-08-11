@@ -78,7 +78,7 @@ const Score = ({ scoreOn, setScoreOn }) => {
                 <li key={index} className="flex items-center gap-3">
                   <div className="grid grid-cols-2 gap-36">
                     <div>
-                      {winner.team}
+                    {winner.team === 'ManjeriEast' ? "Manjeri East" : winner.team === 'ManjeriWest' ? "Manjeri West" : winner.team}
                     </div>
                     <div>
                       <span className="text-2xl">
