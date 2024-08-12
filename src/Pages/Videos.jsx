@@ -26,22 +26,22 @@ const Videos = () => {
 
                   <iframe
                     className=""
-                    src="https://www.youtube.com/embed/T5FbYJ3s2hU?si=LLUQL0RlyV_TD79p"
+                    src="https://www.youtube.com/embed/F7VhKsLBdQY?si=nwul3KpUtqqkevla"
                     frameborder="0"
                   />
                 </div>
-                <h1 className='mt-3 font-medium text-xl'>Stage 01 | Festival of Hope </h1>
+                {/* <h1 className='mt-3 font-medium text-xl'>Festival of Hope </h1> */}
               </div>
               <div>
                 <div className="aspect-w-16 aspect-h-9">
 
                   <iframe
                     className=""
-                    src="https://www.youtube.com/embed/Gk8BgROnDOk?si=e5H6gIVU4Vr_IYCc"
+                    src="https://www.youtube.com/embed/rhzErVnJ7ZM?si=EGAuxiVIa5afFw_z"
                     frameborder="0"
                   />
                 </div>
-                <h1 className='mt-3 font-medium text-xl'>Stage 01 | Festival of Hope </h1>
+                {/* <h1 className='mt-3 font-medium text-xl'>Stage 01 | Festival of Hope </h1> */}
               </div>
             </div>
 
