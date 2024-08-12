@@ -24,7 +24,7 @@ const Home = () => {
       <Ribbon />
       <Message />
       <Counts/>
-      <LiveLinks/>
+      {/* <LiveLinks/> */}
 {/* <Sample/> */}
     </div>
   );
