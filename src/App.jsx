@@ -17,7 +17,7 @@ import ImageUpload from './Pages/ImageUpload';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [onLive, setOnlive] = useState(true);
+  const [onLive, setOnlive] = useState(false);
   const [scoreOn, setScoreOn] = useState(false);
 
   return (
