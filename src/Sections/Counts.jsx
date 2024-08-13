@@ -8,7 +8,7 @@ const Counts = () => {
     {cnt: 12, elem: 'Stages'},
     {cnt: 170, elem: 'Events'},
     {cnt: 3000, elem: 'Participants'},
-    {cnt: 25000, elem: 'Audience'},
+    {cnt: 2500, elem: 'Audience'},
     
   ];
 
