@@ -10,9 +10,9 @@ const About = () => {
   return (
     <section className="mt-16  ">
       <div className="md:h-80 h-[200px] w-full overflow-hidden">
-        <img src="AboutPage.jpg" className=" md:-mt-80 w-full" alt="" />
+        <img src="1.png" className=" md:-mt-64 w-full" alt="" />
       </div>
-      <div className="max-container mt-14 md:padding-y padding-x">
+      <div className="max-container max-md:mt-8 md:padding-y padding-x">
         <h1 className=" mb-8 text-left font-mono text-4xl text-theme_black">
           <span className="text-theme_red">Hope</span>
           {' '}
